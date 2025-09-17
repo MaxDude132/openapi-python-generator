@@ -26,11 +26,11 @@ def test_issue_117(runner: CliRunner, model_data_with_cleanup, library) -> None:
     if library_config_dict[library].include_sync:
         assert (test_result_path / "services" / "default_service.py").exists()
         assert (test_result_path / "services" / "default_service.py").read_text().find(
-            'path = f"/{foo_bar}"'
+            'path = f"/bar-boz/{foo_bar}"'
         ) != -1
 
     if library_config_dict[library].include_async:
         assert (test_result_path / "services" / "async_default_service.py").exists()
         assert (
             test_result_path / "services" / "async_default_service.py"
-        ).read_text().find('path = f"/{foo_bar}"') != -1
+        ).read_text().find('path = f"/bar-boz/{foo_bar}"') != -1

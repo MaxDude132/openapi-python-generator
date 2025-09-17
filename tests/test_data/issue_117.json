@@ -6,7 +6,7 @@
     },
   "paths": {
 
-      "/{foo-bar}": {
+      "/bar-boz/{foo-bar}": {
         "get": {
 
           "parameters": [
