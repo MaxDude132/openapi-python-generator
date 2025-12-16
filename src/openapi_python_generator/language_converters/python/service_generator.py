@@ -56,7 +56,6 @@ from openapi_python_generator.models import (
     TypeConversion,
 )
 
-# Type alias for Components
 Components = Union[Components30, Components31]
 
 # Module-level storage for component parameters (set by generate_services)
